@@ -1,0 +1,8 @@
+logs/
+kote_output/
+KOTEenv/    
+codes/
+models/
+*.h5
+*.tsv
+*.bc

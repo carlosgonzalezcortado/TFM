@@ -1,0 +1,1 @@
+Modelo de IA para detección de emociones en textos coreanos usando KOTE
