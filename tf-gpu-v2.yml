@@ -1,4 +1,4 @@
-name: tf-gpu-v2
+name: tf-gpu-restored
 channels:
   - conda-forge
   - defaults
