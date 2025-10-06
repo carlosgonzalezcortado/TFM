@@ -1,8 +1,46 @@
+# ==========================
+# 🚫 Carpetas a ignorar
+# ==========================
 logs/
 kote_output/
-KOTEenv/    
-codes/
+KOTEenv/
 models/
+checkpoints/
+graficas/
+codes/
+
+# ==========================
+# 🚫 Archivos pesados o binarios
+# ==========================
 *.h5
-*.tsv
 *.bc
+*.ckpt
+*.pt
+*.bin
+
+# ==========================
+# 🚫 Archivos de datos (si no son necesarios en Git)
+# ==========================
+*.csv
+*.json
+*.tsv
+
+# ==========================
+# 🚫 Archivos temporales del sistema o IDE
+# ==========================
+.DS_Store
+Thumbs.db
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# ==========================
+# ✅ Archivos que SÍ deben incluirse
+# ==========================
+!*.py
+!*.ipynb
+!*.tex
+!*.bib
+!*.yml
+!*.md
+!README.md
