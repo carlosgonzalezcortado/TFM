@@ -83,7 +83,7 @@ Este repositorio reúne un proyecto académico de **clasificación multietiqua**
 - Notebook de **entrenamiento/evaluación** (`KOTE_keras.ipynb`).
 - Archivo de entorno **Conda** (`entorno.yml`) listo para GPU.
  
-> **Aviso:** El dataset **no** está incluido. Debes obtener KOTE por tu cuenta (enlaces abajo).
+> **Aviso:** El dataset **no** está incluido en el repositorio. Puedes descargarlo directamente de la fuente oficial de KOTE (enlaces abajo).
  
 ### Estructura del proyecto
 - `predict.py` — inferencia (promedio de folds + umbrales promediados).
@@ -138,5 +138,5 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
 ---
  
 ### Acknowledgements / Agradecimientos
-Thanks to the KOTE authors and to the maintainers of KcELECTRA and Hugging Face/Transformers.  
-Gracias a los autores de KOTE y a los mantenedores de KcELECTRA y HF/Transformers.
+Thanks to KOTE, beomi/KcELECTRA and Hugging Face/Transformers.  
+Gracias a los autores de KOTE, beomi/KcELECTRA y HF/Transformers.
