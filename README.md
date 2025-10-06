@@ -19,7 +19,6 @@ This repository contains an academic project for **multi‑label emotion detecti
 - `KOTE_keras.ipynb` — end‑to‑end notebook (training, evaluation, charts).
 - `entorno.yml` — reproducible environment (GPU‑ready).
 - `Lotes_de_texto_inferencia.txt` — sample Korean sentences for batch inference.
-- `checkpoints/` — **expected local folder** with saved `.keras` models per fold and a `thresholds/` subfolder.
  
 ### Requirements
 - Conda (Miniconda/Anaconda) with CUDA‑capable GPU recommended.
@@ -66,7 +65,6 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
 - For stable runs, keep `MAX_LENGTH=256` (as in the code) unless you know your VRAM headroom.
  
 ### License & use
-- **Code** in this repo: if a `LICENSE` file is not present, consider the project “all rights reserved” by default — please ask the author before reuse.
 - **Data**: follow KOTE’s license/terms and cite the original paper.
 - **Models**: follow the respective model card licenses (KcELECTRA: MIT on HF at the time of writing).
  
@@ -92,7 +90,6 @@ Este repositorio reúne un proyecto académico de **clasificación multietiqua**
 - `KOTE_keras.ipynb` — flujo de entrenamiento, evaluación y figuras.
 - `entorno.yml` — entorno reproducible (GPU).
 - `Lotes_de_texto_inferencia.txt` — frases de ejemplo para inferencia por lotes.
-- `checkpoints/` — **carpeta local esperada** con modelos `.keras` por fold y subcarpeta `thresholds/` con JSONs.
  
 ### Requisitos
 - Conda con GPU compatible (recomendado).
@@ -131,9 +128,8 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
   - Model card: https://huggingface.co/beomi/KcELECTRA-base
  
 ### Licencia y uso
-- **Código**: si el repo no incluye `LICENSE`, se asume “todos los derechos reservados” — solicita permiso antes de reutilizar.
 - **Datos**: respeta la licencia/condiciones de KOTE y cita el paper original.
-- **Modelos**: respeta las licencias de cada tarjeta de modelo.
+- **Modelos**: respeta las licencias de cada modelo.
  
 ### Cómo citar (ejemplos)
 - Jeon, D., Lee, J. y Kim, C. (2024). *User Guide for KOTE: Korean Online That‑gul Emotions Dataset.* LREC‑COLING 2024.
