@@ -51,7 +51,7 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
 - Prints a clean CLI report **and** the exact **ChatGPT prompt** used for a baseline comparison.
  
 ### Labels (Spanish names)
-`predict.py` prints predictions mapped to a fixed ordering of 44 labels (43 emotions + “sin emoción”), e.g.: *alegría/entusiasmo, tristeza, ira/enfado, desconfianza/duda, ansiedad/preocupación, …*
+`predict.py` prints predictions mapped to a fixed ordering of 44 labels (43 emotions + “no emotion”), e.g.: *alegría/entusiasmo, tristeza, ira/enfado, desconfianza/duda, ansiedad/preocupación, …* (*joy/enthusiasm, sadness, anger/rage, distrust/doubt, anxiety/concern, …*)
  
 ### Dataset & model references
 - **KOTE**: 50k Korean online comments (250k cases) annotated for **43 emotions + NO EMOTION** through crowdsourcing. See the LREC‑COLING 2024 paper and HF dataset card.  
@@ -120,6 +120,9 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
 - Aplica los **umbrales** para activar etiquetas.
 - Muestra un informe legible por consola **y** el **prompt de ChatGPT** utilizado para la comparación de referencia.
  
+### Etiquetas
+`predict.py` imprime las predicciones en base a 44 posibles etiquetas (43 emociones + "sin emoción") mapeadas a sus nombres en español, e.g.: *alegría/entusiasmo, tristeza, ira/enfado, desconfianza/duda, ansiedad/preocupación, …*
+
 ### Dataset y modelo
 - **KOTE**: 50k comentarios (250k casos) anotados con **43 emociones + “no emoción”**.  
   - Paper (Jeon et al., 2024): https://aclanthology.org/2024.lrec-main.1499/  
@@ -127,11 +130,16 @@ python predict.py   --ckpt-dir checkpoints/20250804_011700   --batch-file Lotes_
 - **KcELECTRA**: modelo ELECTRA para coreano entrenado con comentarios/respuestas de Naver (≈17 GB), optimizado para **texto ruidoso generado por usuarios**.  
   - Model card: https://huggingface.co/beomi/KcELECTRA-base
  
+### Reproducibilidad y consejos de GPU
+- El entorno fija **TensorFlow 2.19** y `tf-keras`. El script define `TF_USE_LEGACY_KERAS=1` y habilita el **memory growth** para evitar errores de *Out Of Memory* (OOM).
+- Para ejecuciones estables, mantén `MAX_LENGTH=256` (como en el código), salvo tu **margen de VRAM** permite aumentarlo.
+
 ### Licencia y uso
 - **Datos**: respeta la licencia/condiciones de KOTE y cita el paper original.
 - **Modelos**: respeta las licencias de cada modelo.
  
 ### Cómo citar (ejemplos)
+Si utilizas este proyecto o sus resultados, por favor cita KOTE y KcELECTRA:
 - Jeon, D., Lee, J. y Kim, C. (2024). *User Guide for KOTE: Korean Online That‑gul Emotions Dataset.* LREC‑COLING 2024.
 - Beomi (2022–2024). *KcELECTRA-base.* Hugging Face model card.
  
